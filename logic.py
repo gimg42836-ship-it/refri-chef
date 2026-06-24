@@ -1,7 +1,8 @@
+import os 
 import google.generativeai as genai
 
 # 발급받은 제미나이 API 키를 여기에 입력하세요
-genai.configure(api_key="AQ.Ab8RN6IzSDg9wDSsbT-dw9KAFSDKWJYZJ4SdGyeaLVQPB3C4Sw") 
+genai.configure(api_key=os.environ.get("GEMINI_API_KEY")) 
 
 def get_refrigerator_recipe(ingredients):
     """사용자가 입력한 재료로 레시피를 생성하는 함수"""

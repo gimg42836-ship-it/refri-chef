@@ -6,7 +6,7 @@ genai.configure(api_key=os.environ.get("GEMINI_API_KEY"))
 
 def get_refrigerator_recipe(ingredients):
     """사용자가 입력한 재료로 레시피를 생성하는 함수"""
-    model = genai.GenerativeModel('gemini-pro')
+    model = genai.GenerativeModel('gemini-1.5-flash')
     
     # 4대 요소를 반영한 프롬프트 설계 [cite: 18]
     prompt = f"""
